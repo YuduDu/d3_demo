@@ -28,6 +28,7 @@
 		</script>
 	</head>
 	<body>
+		<p>Pie charts</p>
 		<script>
 				
 				var pie=d3.layout.pie(numset);
@@ -69,7 +70,7 @@
 								});
 	
 		</script>
-		
+		<p>rect charts</p>
 		<script>
 			var w=900;
 			var h=300;
@@ -126,7 +127,7 @@
 				.call(yAxis);
 				
 		</script>
-				<p>Area Graph</p>
+		<p>Area Graph</p>
 		<script>
 			var margin={top:10, right:10, bottom: 100, left:40},
 				margin2={top:430, right:10,bottom:20,left:40},
@@ -173,10 +174,10 @@
 			var context=svg.append("g")
 						.attr("transform","translate("+margin2.left+","+margin2.top+")");
 						
-			d3.tsv("dataset.tsv", function(error, data) {//利用csv方法读取数据
+			d3.tsv("dataset.tsv", function(error, data) {
  
-  			data.forEach(function(d) {//遍历数据
-    				d.date = parseDate(d.date);//读取date并转换为时间对象
+  			data.forEach(function(d) {
+    				d.date = parseDate(d.date);
     				d.amount = +d.amount;
   				});
  		
